@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  tgp-monitor:
+    build: .
+    container_name: tgp_monitor_bot
+    restart: always
+    volumes:
+      - ./logs:/app/logs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
