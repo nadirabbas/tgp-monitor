@@ -4,4 +4,4 @@ COPY package.json ./
 RUN npm install
 COPY . .
 # Create a directory for persistent logs
-CMD ["node", "monitor.js"]
+CMD ["node", "index.js"]
